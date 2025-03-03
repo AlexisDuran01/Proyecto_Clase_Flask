@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}Inicio{% endblock %}
+
+{% block content %}
+<div class="container">
+
+    <h1>Bienvenido</h1>
+    {% if name %}
+        <p>Hola, {{ name }}</p>
+    {% else %}
+        <p>Inicia sesion o registrate para comenzar a disfrutar de la plataforma</p>
+    {% endif %}
+</div>
+{% endblock %}

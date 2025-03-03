@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}Iniciar Sesión{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-4">
+
+    <div class="col-md-6 ">
+        <div class="card">
+            <div class="card-header">
+            Iniciar Sesión
+          </div>
+
+         <div class="card-body">
+             <h2 class="text-center"></h2>
+
+            <form method="POST" action="{{ url_for('ingresar') }}">
+                 {{ form.hidden_tag() }}  <!-- Flask-WTF requiere un token CSRF (Cross-Site Request Forgery)
+                  para validar los formularios. Si este token no está presente en el formulario, la validación fallará. -->
+            <div class="mb-3">
+                {{ form.email.label(class="form-label") }} <span class="text-danger">*</span>
+                        {{ form.email(class="form-control") }}      <!-- Muestra el campo de entrada para el email -->
+                        {% if form.email.errors %}  <!-- Si hay errores en el campo "email" -->
+                            <div class="text-danger">
+                                {% for error in form.email.errors %}  <!-- Itera sobre los errores -->
+                                    <small>{{ error }}</small><br>  <!-- Muestra cada error -->
+                                {% endfor %}
+                            </div>
+                {% endif %}
+            </div>
+            <div class="mb-3">
+
+                 {{ form.contrasenia.label(class="form-label") }} <span class="text-danger">*</span>
+                        {{ form.contrasenia(class="form-control") }}
+                        {% if form.contrasenia.errors %}
+                            <div class="text-danger">
+                                {% for error in form.contrasenia.errors %}
+                                    <small>{{ error }}</small><br>
+                                {% endfor %}
+                            </div>
+                {% endif %}
+            </div>
+                <div class="d-flex gap-3 align-items-center">
+                    <button type="submit" class="btn btn-primary">Acceder</button>
+                    <a href="" class="text-muted">¿No tienes cuenta?</a>
+                </div>
+        </form>
+         </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

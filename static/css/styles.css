@@ -1,0 +1,46 @@
+/* Estilos generales */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegura que el contenedor ocupe al menos toda la altura de la ventana */
+}
+
+main {
+    flex: 1; /* Hace que el contenido principal ocupe el espacio restante */
+}
+
+
+.footer-clean {
+  padding:30px 0px 20px 0px;
+  color:black;
+}
+
+.footer-clean ul {
+  padding:0;
+  list-style:none;
+  line-height:1.6;
+  font-size:15px;
+  margin-bottom:0;
+}
+
+.footer-clean ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+}
+
+.footer-clean ul a:hover {
+  opacity: 1;
+}
+
+.full-width {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}

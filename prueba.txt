@@ -1,0 +1,13 @@
+
+Nombre	Segundo Nombre	Apellido Paterno	Apellido Materno	Teléfono	Correo Electrónico	Contraseña
+
+Juan	Carlos	Pérez	López	555-123-4567	juan.perez@example.com	Juan123!
+María	Elena	Gómez	Sánchez	555-234-5678	maria.gomez@example.com	Maria456!
+Pedro	Antonio	Rodríguez	Martínez	555-345-6789	pedro.rodriguez@example.com	Pedro789!
+Ana	Sofía	Hernández	García	555-456-7890	ana.hernandez@example.com	Ana012!
+Luis	Miguel	Díaz	Fernández	555-567-8901	luis.diaz@example.com	Luis345!
+Carmen	Isabel	Morales	Romero	555-678-9012	carmen.morales@example.com	Carmen678!
+José	Francisco	Torres	Jiménez	555-789-0123	jose.torres@example.com	Jose901!
+Laura	Patricia	Ruiz	Vargas	555-890-1234	laura.ruiz@example.com	Laura234!
+Carlos	Andrés	Silva	Castro	555-901-2345	carlos.silva@example.com	Carlos567!
+Sofía	Gabriela	Mendoza	Ortega	555-012-3456	sofia.mendoza@example.com	Sofia890!

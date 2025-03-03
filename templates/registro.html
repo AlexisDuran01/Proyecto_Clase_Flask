@@ -1,0 +1,121 @@
+    {% extends "base.html" %}
+
+    {% block title %}Registro{% endblock %}
+
+    {% block content %}
+    <div class="row justify-content-center mt-4 mb-4">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    Registro
+                </div>
+                <div class="card-body">
+
+                    <form method="POST" action="{{ url_for('registro') }}">
+                        {{ form.hidden_tag() }}  <!-- Protege contra ataques CSRF
+                        es un tipo de ataque que se suele usar para estafas por Internet.
+                        Los delincuentes se apoderan de una sesión autorizada por el usuario
+                        (session riding) para realizar actos dañinos. El proceso se lleva a
+                        cabo mediante solicitudes HTTP-->
+
+                    <!-- Campo de nombre -->
+                    <div class="mb-3">
+                        {{ form.nombre.label(class="form-label") }} <span class="text-danger">*</span>  <!-- Asterisco rojo -->
+                        {{ form.nombre(class="form-control") }}      <!-- Muestra el campo de entrada para el nombre -->
+                        {% if form.nombre.errors %}  <!-- Si hay errores en el campo "nombre" -->
+                            <div class="text-danger">
+                                {% for error in form.nombre.errors %}  <!-- Itera sobre los errores -->
+                                    <small>{{ error }}</small><br>  <!-- Muestra cada error -->
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Campo de segundo nombre (opcional) -->
+                    <div class="mb-3">
+                        {{ form.segundo_nombre.label(class="form-label") }}  <!-- No es obligatorio, no lleva asterisco -->
+                        {{ form.segundo_nombre(class="form-control") }}      <!-- Muestra el campo de entrada para el segundo nombre -->
+                        {% if form.segundo_nombre.errors %}  <!-- Si hay errores en el campo "segundo_nombre" -->
+                            <div class="text-danger">
+                                {% for error in form.segundo_nombre.errors %}  <!-- Itera sobre los errores -->
+                                    <small>{{ error }}</small><br>  <!-- Muestra cada error -->
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Campo de apellido paterno -->
+                    <div class="mb-3">
+                        {{ form.apellido_paterno.label(class="form-label") }} <span class="text-danger">*</span>  <!-- Asterisco rojo -->
+                        {{ form.apellido_paterno(class="form-control") }}      <!-- Muestra el campo de entrada para el apellido paterno -->
+                        {% if form.apellido_paterno.errors %}  <!-- Si hay errores en el campo "apellido_paterno" -->
+                            <div class="text-danger">
+                                {% for error in form.apellido_paterno.errors %}  <!-- Itera sobre los errores -->
+                                    <small>{{ error }}</small><br>  <!-- Muestra cada error -->
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Campo de apellido materno (opcional) -->
+                    <div class="mb-3">
+                        {{ form.apellido_materno.label(class="form-label") }}  <!-- No es obligatorio, no lleva asterisco -->
+                        {{ form.apellido_materno(class="form-control") }}      <!-- Muestra el campo de entrada para el apellido materno -->
+                        {% if form.apellido_materno.errors %}  <!-- Si hay errores en el campo "apellido_materno" -->
+                            <div class="text-danger">
+                                {% for error in form.apellido_materno.errors %}  <!-- Itera sobre los errores -->
+                                    <small>{{ error }}</small><br>  <!-- Muestra cada error -->
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Campo de teléfono (opcional) -->
+                    <div class="mb-3">
+                        {{ form.telefono.label(class="form-label") }}  <!-- No es obligatorio, no lleva asterisco -->
+                        {{ form.telefono(class="form-control") }}      <!-- Muestra el campo de entrada para el teléfono -->
+                        {% if form.telefono.errors %}  <!-- Si hay errores en el campo "telefono" -->
+                            <div class="text-danger">
+                                {% for error in form.telefono.errors %}  <!-- Itera sobre los errores -->
+                                    <small>{{ error }}</small><br>  <!-- Muestra cada error -->
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Campo de email -->
+                    <div class="mb-3">
+                        {{ form.email.label(class="form-label") }} <span class="text-danger">*</span>  <!-- Asterisco rojo -->
+                        {{ form.email(class="form-control") }}      <!-- Muestra el campo de entrada para el email -->
+                        {% if form.email.errors %}  <!-- Si hay errores en el campo "email" -->
+                            <div class="text-danger">
+                                {% for error in form.email.errors %}  <!-- Itera sobre los errores -->
+                                    <small>{{ error }}</small><br>  <!-- Muestra cada error -->
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+
+                    <!-- Campo de contraseña -->
+                    <div class="mb-3">
+                        {{ form.contrasenia.label(class="form-label") }} <span class="text-danger">*</span>  <!-- Asterisco rojo -->
+                        {{ form.contrasenia(class="form-control") }}      <!-- Muestra el campo de entrada para la contraseña -->
+                        {% if form.contrasenia.errors %}  <!-- Si hay errores en el campo "contrasenia" -->
+                            <div class="text-danger">
+                                {% for error in form.contrasenia.errors %}  <!-- Itera sobre los errores -->
+                                    <small>{{ error }}</small><br>  <!-- Muestra cada error -->
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                        <!-- Botón de registro y enlace de inicio de sesión -->
+                        <div class="d-flex gap-3 align-items-center">
+                            <button type="submit" class="btn btn-primary">{{ form.submit.label }}</button>  <!-- Muestra el botón de "Registrarse" -->
+                            <a href="{{ url_for('ingresar') }}" class="text-muted">¿Ya tienes cuenta? </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock %}

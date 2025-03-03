@@ -1,0 +1,14 @@
+{% extends 'base_post_login.html' %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Dashboard</h1>
+    {% if nombre and apellido_paterno %}
+        {% if nuevo_usuario %}
+            <p>¡Bienvenido, {{ nombre }} {{ apellido_paterno }}! Gracias por registrarte.</p>
+        {% else %}
+            <p>¡Hola de nuevo, {{ nombre }} {{ apellido_paterno }}! Feliz de tenerte de vuelta.</p>
+        {% endif %}
+    {% endif %}
+</div>
+{% endblock %}
