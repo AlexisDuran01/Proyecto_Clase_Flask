@@ -8,6 +8,49 @@ from sqlalchemy.exc import SQLAlchemyError
 
 from models import db,Usuario
 
+import logging  # Importa el módulo logging para gestionar registros (logs)
+from logging.handlers import RotatingFileHandler  # Importa un manejador de archivos rotativos para los logs
+import datetime  # Importa el módulo datetime para trabajar con fechas y horas
+
+# Definir la ubicación del archivo donde se guardarán los logs
+LOG_FILENAME = 'logs/events.log'  
+
+
+# Definir el formato de los logs en una variable separada
+LOG_FORMAT = '%(asctime)s - %(message)s'
+
+# Explicación detallada del formato:
+#
+# %(asctime)s  --> Representa la fecha y hora en que se generó el log
+#               Este valor se muestra en el formato por defecto: 'YYYY-MM-DD HH:MM:SS,sss'
+#               El valor es generado automáticamente por el sistema de logging en Python    
+#
+# %(levelname)s --> Representa el nivel del log (por ejemplo: DEBUG, INFO, WARNING, ERROR, CRITICAL)
+#                 Esto indica la severidad o importancia del mensaje que se está registrando
+#
+# 'Usuario: %(username)s'  --> Aquí se agrega un campo personalizado "Usuario"
+#                             Util para saber quien realizo al accion
+#
+# %(message)s  --> Representa el mensaje del log
+#                Este es el contenido real del log que describe el evento o la acción que ocurrio
+
+
+# Configurar el sistema de logging
+logging.basicConfig(
+    level=logging.DEBUG,  # Define el nivel de registro (DEBUG captura todos los mensajes)
+    format='%(asctime)s - %(levelname)s - %(message)s',  # Formato de los logs
+    handlers=[logging.StreamHandler()]  # Muestra los logs en la consola
+)
+
+# El nivel DEBUG captura todos los mensajes, desde el nivel más bajo hasta el más alto:
+#  - DEBUG: mensajes detallados para depuración (10)
+#  - INFO: información general (20)
+#  - WARNING: advertencias de posibles problemas (30)
+#  - ERROR: errores que no detienen el programa (40)
+#  - CRITICAL: errores graves que pueden detener el programa (50)
+
+
+
 
 '''
 Crea una instancia de la aplicación Flask

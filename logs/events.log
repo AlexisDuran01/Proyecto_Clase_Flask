@@ -1,0 +1,27 @@
+2025-03-19 19:46:42,580 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-19 19:46:42,581 - [33mPress CTRL+C to quit[0m
+2025-03-19 19:46:42,590 -  * Restarting with stat
+2025-03-19 19:46:44,327 -  * Debugger is active!
+2025-03-19 19:46:44,330 -  * Debugger PIN: 521-688-794
+2025-03-19 19:47:24,860 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-19 19:47:24,861 - [33mPress CTRL+C to quit[0m
+2025-03-19 19:47:24,864 -  * Restarting with stat
+2025-03-19 19:47:26,632 -  * Debugger is active!
+2025-03-19 19:47:26,636 -  * Debugger PIN: 416-080-667
+2025-03-19 19:47:49,774 -  * Detected change in '/home/alexisduran/Downloads/Proyecto_Clase/app.py', reloading
+2025-03-19 19:47:49,939 -  * Restarting with stat
+2025-03-19 19:47:54,030 -  * Restarting with stat
+2025-03-19 19:47:57,043 -  * Restarting with stat
+2025-03-19 19:47:58,729 -  * Debugger is active!
+2025-03-19 19:47:58,731 -  * Debugger PIN: 184-828-699
+2025-03-19 19:48:14,140 - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-19 19:48:14,140 - [33mPress CTRL+C to quit[0m
+2025-03-19 19:48:14,143 -  * Restarting with stat
+2025-03-19 19:48:15,946 -  * Debugger is active!
+2025-03-19 19:48:15,949 -  * Debugger PIN: 113-722-022
+2025-03-19 19:50:30,341 -  * Detected change in '/home/alexisduran/Downloads/Proyecto_Clase/app.py', reloading
+2025-03-19 19:50:30,500 -  * Restarting with stat
+2025-03-19 19:51:09,396 -  * Restarting with stat
